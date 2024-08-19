@@ -1,0 +1,87 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>GYM Management Site</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-color: #f8f9fa; /* Light grey background for header */
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #ddd; /* Subtle bottom border */
+    }
+
+    .header img {
+        max-width: 100%; /* Responsive image */
+        }
+
+    .nav-bar {
+        background-color: #343a40; /* Dark background for navigation */
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-bar a {
+        color: #FFCC00; /* Golden color for links */
+        text-decoration: none;
+        font-size: 18px;
+        margin: 0 15px;
+    }
+
+    .nav-bar a:hover {
+        text-decoration: underline;
+    }
+
+    .content-container {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff; /* White background for content */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
+    }
+</style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <br />
+            <asp:Label ID="Label3" runat="server" Text="GYM Management Site" 
+                Font-Bold="True" Font-Italic="True" Font-Size="X-Large" ForeColor="#FF9933"></asp:Label>
+            <br />
+            <br />
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/images/logo.png" 
+                Height="257px" Width="532px" />
+            <br />
+            <br />
+            <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+        </div>
+
+        <div class="nav-bar">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton5" runat="server" Font-Bold="True" 
+                Font-Size="Large" ForeColor="#FFCC00">Dashboard</asp:LinkButton>
+            &nbsp;<asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="#FFCC00">Search</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton2" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="#FFCC00">Edit Profile</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="#FFCC00">Change Password</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton4" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="#FFCC00">Log Out</asp:LinkButton>
+        </div>
+
+        <div class="content-container">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
